@@ -1,0 +1,256 @@
+/*
+    custom.css — Kpepime Bassey Portfolio
+    Grey background, black text theme override
+    Add this AFTER main.css in index.html:
+    <link rel="stylesheet" href="assets/css/custom.css" />
+*/
+
+/* ── Global ─────────────────────────────────────────── */
+
+body {
+    background: #e8e8e8;
+}
+
+body, input, select, textarea {
+    color: #1a1a1a;
+}
+
+a {
+    color: #1a1a1a;
+    border-bottom-color: rgba(0, 0, 0, 0.25);
+}
+
+a:hover {
+    color: #000000;
+    border-bottom-color: transparent;
+}
+
+strong, b {
+    color: #000000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #111111;
+}
+
+/* ── Sidebar ─────────────────────────────────────────── */
+
+#sidebar {
+    background: #1a1a1a;
+}
+
+#sidebar .inner nav ul li a {
+    color: rgba(255, 255, 255, 0.75);
+    border-bottom-color: transparent;
+}
+
+#sidebar .inner nav ul li a:hover {
+    color: #ffffff;
+}
+
+/* ── Intro — style1 ──────────────────────────────────── */
+
+.wrapper.style1 {
+    background-color: #2b2b2b;
+    padding: 6em 0;
+}
+
+.wrapper.style1 h1,
+.wrapper.style1 h2,
+.wrapper.style1 h3 {
+    color: #ffffff;
+}
+
+.wrapper.style1 p {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.wrapper.style1 em {
+    color: #ffffff;
+}
+
+/* ── Skills — style2 spotlights ─────────────────────── */
+
+.wrapper.style2 {
+    background-color: #f0f0f0;
+}
+
+.wrapper.style2 .inner {
+    padding: 4em 3em;
+}
+
+.wrapper.style2 h2 {
+    color: #111111;
+}
+
+.wrapper.style2 h3 {
+    color: #333333;
+    margin-top: 1.2em;
+}
+
+.wrapper.style2 p {
+    color: #444444;
+}
+
+/* Skills section spotlights fix */
+.wrapper.style2.spotlights > section {
+    background-color: #f0f0f0;
+}
+
+/* ── Projects — style3 ───────────────────────────────── */
+
+.wrapper.style3 {
+    background-color: #e2e2e2;
+    padding: 5em 0;
+}
+
+.wrapper.style3 h2 {
+    color: #111111;
+    margin-bottom: 1.5em;
+}
+
+.wrapper.style3 .inner {
+    padding: 4em 3em;
+}
+
+/* Project feature cards */
+.features section {
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 2.5em 2.5em 1.5em 6em !important;
+    margin-bottom: 1em;
+}
+
+.features section h3 {
+    color: #111111;
+}
+
+.features section p {
+    color: #444444;
+}
+
+/* Feature section icons */
+.features .icon.major {
+    color: #2b2b2b;
+}
+
+.features .icon.major:before {
+    background: #e2e2e2 !important;
+}
+
+/* ── Contact — style1 fade-up ────────────────────────── */
+
+#three.wrapper.style1 {
+    background-color: #f0f0f0;
+    padding: 5em 0;
+}
+
+#three h2 {
+    color: #111111;
+}
+
+#three h3 {
+    color: #333333;
+}
+
+#three a {
+    color: #1a1a1a;
+}
+
+/* Form fields */
+#three input[type="text"],
+#three input[type="email"],
+#three textarea {
+    background: #ffffff;
+    border-color: #cccccc;
+    color: #1a1a1a;
+}
+
+#three input[type="text"]:focus,
+#three input[type="email"]:focus,
+#three textarea:focus {
+    border-color: #1a1a1a;
+}
+
+#three label {
+    color: #333333;
+}
+
+/* ── Buttons ─────────────────────────────────────────── */
+
+.button {
+    background-color: transparent;
+    border-color: #1a1a1a;
+    color: #1a1a1a !important;
+}
+
+.button:hover {
+    background-color: #1a1a1a;
+    color: #ffffff !important;
+}
+
+.button.primary {
+    background-color: #1a1a1a;
+    border-color: #1a1a1a;
+    color: #ffffff !important;
+}
+
+.button.primary:hover {
+    background-color: #333333;
+}
+
+/* Intro button override — keep it light on dark bg */
+.wrapper.style1 .button {
+    border-color: rgba(255, 255, 255, 0.7);
+    color: #ffffff !important;
+}
+
+.wrapper.style1 .button:hover {
+    background-color: #ffffff;
+    color: #1a1a1a !important;
+}
+
+/* ── Footer — style1-alt ─────────────────────────────── */
+
+#footer.wrapper.style1-alt {
+    background-color: #1a1a1a;
+    padding: 2em 0;
+}
+
+#footer .menu li {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ── Icons — social links ────────────────────────────── */
+
+ul.icons li a {
+    color: #1a1a1a !important;
+    border-bottom: none;
+}
+
+ul.icons li a:hover {
+    color: #000000 !important;
+}
+
+/* ── Section padding utility ─────────────────────────── */
+
+.wrapper > .inner {
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper > .inner {
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+
+    .wrapper.style3 .inner,
+    .wrapper.style2 .inner {
+        padding: 3em 1.5em;
+    }
+
+    .features section {
+        padding: 2em 1.5em 1.5em 1.5em !important;
+    }
+}
