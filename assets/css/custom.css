@@ -1,6 +1,6 @@
 /*
     custom.css — Kpepime Bassey Portfolio
-    Clean rewrite — grey bg, black text, boxed cards, hover effects
+    Final clean version
 */
 
 /* ══════════════════════════════════════════════════════════
@@ -62,7 +62,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #intro.wrapper > .inner,
-#one.wrapper > .inner,
 #two.wrapper > .inner,
 #three.wrapper > .inner {
     border-radius: 12px;
@@ -107,48 +106,80 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ══════════════════════════════════════════════════════════
-   SKILLS — white card, hover to dark
+   SKILLS — full width white card, hover to dark
 ══════════════════════════════════════════════════════════ */
 
 .wrapper.style2 {
     background-color: #e0e0e0;
 }
 
-.wrapper.style2.spotlights > section {
-    background: transparent;
+/* Remove spotlights layout — make it a single full-width card */
+.wrapper.style2.spotlights {
+    display: block !important;
 }
 
-.wrapper.style2.spotlights > section > .content {
-    background: #ffffff;
-    border-radius: 12px;
-    border: 1px solid #cccccc;
+.wrapper.style2.spotlights > section {
+    display: block !important;
+    width: 100% !important;
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    border: 1px solid #cccccc !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 3.5em !important;
     transition: background 0.3s ease, border-color 0.3s ease;
 }
 
+.wrapper.style2.spotlights > section:hover {
+    background: #1a1a1a !important;
+    border-color: #1a1a1a !important;
+}
+
+.wrapper.style2.spotlights > section > .image {
+    display: none !important;
+}
+
+.wrapper.style2.spotlights > section > .content {
+    width: 100% !important;
+    max-width: 100% !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
 .wrapper.style2.spotlights > section > .content > .inner {
-    padding: 3em;
+    padding: 0 !important;
 }
 
-.wrapper.style2.spotlights > section > .content:hover {
-    background: #1a1a1a;
-    border-color: #1a1a1a;
-}
-
-.wrapper.style2.spotlights > section > .content:hover h2,
-.wrapper.style2.spotlights > section > .content:hover h3,
-.wrapper.style2.spotlights > section > .content:hover p {
-    color: #ffffff !important;
+.wrapper.style2.spotlights > section h2,
+.wrapper.style2.spotlights > section h3 {
+    color: #111111;
     transition: color 0.3s ease;
 }
 
-.wrapper.style2.spotlights > section > .content:hover .button {
+.wrapper.style2.spotlights > section p {
+    color: #444444;
+    transition: color 0.3s ease;
+}
+
+.wrapper.style2.spotlights > section:hover h2,
+.wrapper.style2.spotlights > section:hover h3 {
+    color: #ffffff !important;
+}
+
+.wrapper.style2.spotlights > section:hover p {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.wrapper.style2.spotlights > section:hover .button {
     background-color: #ffffff !important;
     border-color: #ffffff !important;
     color: #1a1a1a !important;
 }
 
 /* ══════════════════════════════════════════════════════════
-   PROJECTS — each card is its own box, hover to dark
+   PROJECTS — each card its own box, hover to dark
 ══════════════════════════════════════════════════════════ */
 
 .wrapper.style3 {
@@ -207,7 +238,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #1a1a1a !important;
 }
 
-/* Icons — no background at all */
+/* Icons — no background */
 .features .icon.major {
     color: #2b2b2b;
     background: none !important;
@@ -220,7 +251,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .features section:hover .icon.major {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 /* ══════════════════════════════════════════════════════════
@@ -274,17 +305,18 @@ h1, h2, h3, h4, h5, h6 {
     background: #ffffff;
 }
 
-/* Social icons — no background */
+/* Social icons */
 ul.icons li a {
     color: #1a1a1a !important;
     border: 1px solid #999999 !important;
-    border-radius: 8px;
+    border-radius: 8px !important;
     width: 2.5em;
     height: 2.5em;
     line-height: 2.5em;
     text-align: center;
     display: inline-block;
     background: none !important;
+    box-shadow: none !important;
     transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
@@ -304,7 +336,10 @@ ul.icons li a:hover {
     border-radius: 8px !important;
     color: #1a1a1a !important;
     font-weight: bold !important;
-    padding: 0.6em 1.2em;
+    padding: 0.6em 1.2em !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
     transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -313,6 +348,7 @@ ul.icons li a:hover {
     color: #ffffff !important;
 }
 
+/* Primary button */
 .button.primary {
     background-color: #1a1a1a !important;
     border: 1px solid #1a1a1a !important;
@@ -325,7 +361,7 @@ ul.icons li a:hover {
     border-color: #333333 !important;
 }
 
-/* Intro button — transparent with white border */
+/* Intro button */
 .wrapper.style1 .button {
     background-color: transparent !important;
     border: 1px solid #ffffff !important;
@@ -338,21 +374,25 @@ ul.icons li a:hover {
     color: #1a1a1a !important;
 }
 
-/* Submit button */
+/* Send Message submit button */
 input[type="submit"] {
     background-color: #1a1a1a !important;
     border: 1px solid #1a1a1a !important;
     color: #ffffff !important;
     font-weight: bold !important;
     border-radius: 8px !important;
-    padding: 0.75em 2em;
-    cursor: pointer;
+    padding: 0.75em 2em !important;
+    cursor: pointer !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
     transition: background 0.3s ease;
 }
 
 input[type="submit"]:hover {
     background-color: #333333 !important;
     border-color: #333333 !important;
+    color: #ffffff !important;
 }
 
 /* ══════════════════════════════════════════════════════════
@@ -382,11 +422,14 @@ input[type="submit"]:hover {
     }
 
     #intro.wrapper > .inner,
-    #one.wrapper > .inner,
     #two.wrapper > .inner,
     #three.wrapper > .inner {
         padding: 2.5em 1.5em;
         border-radius: 8px;
+    }
+
+    .wrapper.style2.spotlights > section {
+        padding: 2em 1.5em !important;
     }
 
     .features section {
