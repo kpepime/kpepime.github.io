@@ -393,23 +393,3 @@ input[type="submit"]:hover {
         padding: 2em 1.5em 1.5em 1.5em !important;
     }
 }
-
-/* Fix skills card centering */
-#one.wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#one.wrapper > section {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.wrapper.style2.spotlights > section > .content {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
-    float: none !important;
-}
