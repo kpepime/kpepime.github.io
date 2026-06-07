@@ -1,14 +1,12 @@
 /*
     custom.css — Kpepime Bassey Portfolio
-    Grey background, black text theme override
-    Add this AFTER main.css in index.html:
-    <link rel="stylesheet" href="assets/css/custom.css" />
+    Grey background, black text, boxed sections, fixed buttons
 */
 
-/* ── Global ─────────────────────────────────────────── */
+/* ── Global ────────────────────────────────────────────── */
 
 body {
-    background: #e8e8e8;
+    background: #d6d6d6;
 }
 
 body, input, select, textarea {
@@ -17,7 +15,7 @@ body, input, select, textarea {
 
 a {
     color: #1a1a1a;
-    border-bottom-color: rgba(0, 0, 0, 0.25);
+    border-bottom-color: rgba(0, 0, 0, 0.2);
 }
 
 a:hover {
@@ -33,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #111111;
 }
 
-/* ── Sidebar ─────────────────────────────────────────── */
+/* ── Sidebar ────────────────────────────────────────────── */
 
 #sidebar {
     background: #1a1a1a;
@@ -48,11 +46,37 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffffff;
 }
 
-/* ── Intro — style1 ──────────────────────────────────── */
+/* ── Section wrapper containers ─────────────────────────── */
+/* Each section gets a white boxed card with rounded corners */
+
+#intro.wrapper,
+#one.wrapper,
+#two.wrapper,
+#three.wrapper {
+    padding: 3em 2em;
+}
+
+#intro.wrapper > .inner,
+#one.wrapper > .inner,
+#two.wrapper > .inner,
+#three.wrapper > .inner {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #cccccc;
+    padding: 4em 3.5em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ── Intro — style1 ─────────────────────────────────────── */
 
 .wrapper.style1 {
     background-color: #2b2b2b;
-    padding: 6em 0;
+}
+
+#intro.wrapper > .inner {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.15);
 }
 
 .wrapper.style1 h1,
@@ -62,46 +86,43 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wrapper.style1 p {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .wrapper.style1 em {
     color: #ffffff;
+    font-style: italic;
 }
 
-/* ── Skills — style2 spotlights ─────────────────────── */
+/* ── Skills — style2 ────────────────────────────────────── */
 
 .wrapper.style2 {
-    background-color: #f0f0f0;
-}
-
-.wrapper.style2 .inner {
-    padding: 4em 3em;
+    background-color: #e0e0e0;
 }
 
 .wrapper.style2 h2 {
     color: #111111;
+    margin-bottom: 1em;
 }
 
 .wrapper.style2 h3 {
-    color: #333333;
-    margin-top: 1.2em;
+    color: #222222;
+    margin-top: 1.5em;
+    margin-bottom: 0.4em;
 }
 
 .wrapper.style2 p {
     color: #444444;
 }
 
-/* Skills section spotlights fix */
 .wrapper.style2.spotlights > section {
-    background-color: #f0f0f0;
+    background: transparent;
 }
 
-/* ── Projects — style3 ───────────────────────────────── */
+/* ── Projects — style3 ──────────────────────────────────── */
 
 .wrapper.style3 {
-    background-color: #e2e2e2;
-    padding: 5em 0;
+    background-color: #d6d6d6;
 }
 
 .wrapper.style3 h2 {
@@ -109,108 +130,156 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1.5em;
 }
 
-.wrapper.style3 .inner {
-    padding: 4em 3em;
-}
-
-/* Project feature cards */
+/* Each project card gets its own white box */
 .features section {
-    background: #ffffff;
-    border-radius: 6px;
-    padding: 2.5em 2.5em 1.5em 6em !important;
-    margin-bottom: 1em;
+    background: #ffffff !important;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    padding: 2.5em 2.5em 2em 6.5em !important;
+    margin-bottom: 1.5em;
 }
 
 .features section h3 {
     color: #111111;
+    font-weight: bold;
+    margin-bottom: 0.5em;
 }
 
 .features section p {
     color: #444444;
+    margin-bottom: 1.2em;
 }
 
-/* Feature section icons */
 .features .icon.major {
     color: #2b2b2b;
 }
 
 .features .icon.major:before {
-    background: #e2e2e2 !important;
+    background: #e8e8e8 !important;
 }
 
-/* ── Contact — style1 fade-up ────────────────────────── */
+/* ── Contact — style1 ───────────────────────────────────── */
 
 #three.wrapper.style1 {
-    background-color: #f0f0f0;
-    padding: 5em 0;
+    background-color: #e0e0e0;
 }
 
 #three h2 {
     color: #111111;
+    margin-bottom: 1.2em;
 }
 
 #three h3 {
     color: #333333;
+    margin-bottom: 0.5em;
+}
+
+#three label {
+    color: #333333;
+    font-weight: bold;
 }
 
 #three a {
     color: #1a1a1a;
 }
 
-/* Form fields */
+/* Contact form fields */
 #three input[type="text"],
 #three input[type="email"],
 #three textarea {
     background: #ffffff;
-    border-color: #cccccc;
+    border: 1px solid #bbbbbb;
+    border-radius: 6px;
     color: #1a1a1a;
+    padding: 0.75em 1em;
 }
 
 #three input[type="text"]:focus,
 #three input[type="email"]:focus,
 #three textarea:focus {
     border-color: #1a1a1a;
+    outline: none;
 }
 
-#three label {
-    color: #333333;
-}
-
-/* ── Buttons ─────────────────────────────────────────── */
-
-.button {
-    background-color: transparent;
-    border-color: #1a1a1a;
+/* Social icons */
+ul.icons li a {
     color: #1a1a1a !important;
+    border: 1px solid #999999;
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
+    display: inline-block;
+}
+
+ul.icons li a:hover {
+    background: #1a1a1a;
+    color: #ffffff !important;
+    border-color: #1a1a1a;
+}
+
+/* ── BUTTONS — fix visibility everywhere ─────────────────── */
+
+/* Default button — dark border, dark text, white bg */
+.button {
+    background-color: #ffffff !important;
+    border: 2px solid #1a1a1a !important;
+    color: #1a1a1a !important;
+    font-weight: bold !important;
+    border-radius: 6px;
+    padding: 0.6em 1.5em;
 }
 
 .button:hover {
-    background-color: #1a1a1a;
+    background-color: #1a1a1a !important;
     color: #ffffff !important;
 }
 
+/* Primary button — solid dark */
 .button.primary {
-    background-color: #1a1a1a;
-    border-color: #1a1a1a;
+    background-color: #1a1a1a !important;
+    border: 2px solid #1a1a1a !important;
     color: #ffffff !important;
+    font-weight: bold !important;
 }
 
 .button.primary:hover {
-    background-color: #333333;
+    background-color: #333333 !important;
+    border-color: #333333 !important;
 }
 
-/* Intro button override — keep it light on dark bg */
+/* Intro section buttons — white outline on dark bg */
 .wrapper.style1 .button {
-    border-color: rgba(255, 255, 255, 0.7);
+    background-color: transparent !important;
+    border: 2px solid #ffffff !important;
     color: #ffffff !important;
+    font-weight: bold !important;
 }
 
 .wrapper.style1 .button:hover {
-    background-color: #ffffff;
+    background-color: #ffffff !important;
     color: #1a1a1a !important;
 }
 
-/* ── Footer — style1-alt ─────────────────────────────── */
+/* Submit input button */
+input[type="submit"].button,
+input[type="submit"] {
+    background-color: #1a1a1a !important;
+    border: 2px solid #1a1a1a !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
+    border-radius: 6px;
+    padding: 0.75em 2em;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #333333 !important;
+    border-color: #333333 !important;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
 
 #footer.wrapper.style1-alt {
     background-color: #1a1a1a;
@@ -218,36 +287,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #footer .menu li {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.55);
 }
 
-/* ── Icons — social links ────────────────────────────── */
-
-ul.icons li a {
-    color: #1a1a1a !important;
-    border-bottom: none;
-}
-
-ul.icons li a:hover {
-    color: #000000 !important;
-}
-
-/* ── Section padding utility ─────────────────────────── */
-
-.wrapper > .inner {
-    padding-top: 4em;
-    padding-bottom: 4em;
-}
+/* ── Responsive ──────────────────────────────────────────── */
 
 @media screen and (max-width: 768px) {
-    .wrapper > .inner {
-        padding-top: 3em;
-        padding-bottom: 3em;
-    }
-
-    .wrapper.style3 .inner,
-    .wrapper.style2 .inner {
-        padding: 3em 1.5em;
+    #intro.wrapper > .inner,
+    #one.wrapper > .inner,
+    #two.wrapper > .inner,
+    #three.wrapper > .inner {
+        padding: 2.5em 1.5em;
+        border-radius: 8px;
     }
 
     .features section {
