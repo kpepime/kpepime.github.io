@@ -77,8 +77,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #intro.wrapper > .inner {
-    background: rgba(255, 255, 255, 0.07);
-    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
 }
 
 .wrapper.style1 h1,
@@ -336,4 +336,26 @@ input[type="submit"]:hover {
 
 #footer.wrapper {
     margin-top: 2em;
+}
+
+/* Skills section hover effect */
+#one.wrapper > .inner {
+    background: #ffffff !important;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+#one.wrapper > .inner:hover {
+    background: #1a1a1a !important;
+}
+
+#one.wrapper > .inner:hover h2,
+#one.wrapper > .inner:hover h3,
+#one.wrapper > .inner:hover p {
+    color: #ffffff !important;
+}
+
+#one.wrapper > .inner:hover .button {
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+    color: #1a1a1a !important;
 }
