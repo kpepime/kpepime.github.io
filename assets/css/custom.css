@@ -245,21 +245,21 @@ ul.icons li a:hover {
 }
 
 .button.primary:hover {
-    background-color: #333333 !important;
-    border-color: #333333 !important;
+    background-color: #1a1a1a !important;
+    border-color: #ffffff !important;
 }
 
 /* Intro section buttons — white outline on dark bg */
 .wrapper.style1 .button {
     background-color: transparent !important;
-    border: 2px solid #ffffff !important;
+    border: 1px solid #1a1a1a !important;
     color: #ffffff !important;
     font-weight: bold !important;
 }
 
 .wrapper.style1 .button:hover {
-    background-color: #ffffff !important;
-    color: #1a1a1a !important;
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
 }
 
 /* Submit input button */
@@ -304,4 +304,29 @@ input[type="submit"]:hover {
     .features section {
         padding: 2em 1.5em 1.5em 1.5em !important;
     }
+}
+
+/* ── Fix: each project gets its own card ────────────────── */
+
+.features {
+    display: block !important;
+}
+
+.features section {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 2em !important;
+}
+
+/* ── Fix: spacing between wrapper sections ──────────────── */
+
+#intro.wrapper,
+#one.wrapper,
+#two.wrapper,
+#three.wrapper {
+    padding: 4em 3em !important;
+}
+
+#footer.wrapper {
+    margin-top: 2em;
 }
