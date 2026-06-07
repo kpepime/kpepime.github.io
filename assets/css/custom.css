@@ -207,7 +207,7 @@ h1, h2, h3, h4, h5, h6 {
 ul.icons li a {
     color: #1a1a1a !important;
     border: 1px solid #999999;
-    border-radius: 50%;
+    border-radius: 8px;
     width: 2.5em;
     height: 2.5em;
     line-height: 2.5em;
@@ -227,6 +227,7 @@ ul.icons li a:hover {
 .button {
     background-color: #ffffff !important;
     border: 1px solid #1a1a1a !important;
+    border-radius: 8px;
     color: #1a1a1a !important;
     font-weight: bold !important;
     border-radius: 6px;
@@ -240,21 +241,24 @@ ul.icons li a:hover {
 
 /* Primary button — solid dark */
 .button.primary {
-    background-color: #1a1a1a !important;
+    background-color: #ffffff !important;
     border: 1px solid #1a1a1a !important;
-    color: #ffffff !important;
+    border-radius: 8px;
+    color: #1a1a1a !important;
     font-weight: bold !important;
 }
 
 .button.primary:hover {
     background-color: #1a1a1a !important;
     border-color: #ffffff !important;
+    color: #ffffff !important;
 }
 
 /* Intro section buttons — white outline on dark bg */
 .wrapper.style1 .button {
-    background-color: transparent !important;
+    background-color: #1a1a1a !important;
     border: 1px solid #1a1a1a !important;
+    border-radius: 8px;
     color: #ffffff !important;
     font-weight: bold !important;
 }
