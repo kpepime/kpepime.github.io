@@ -1,9 +1,11 @@
 /*
     custom.css — Kpepime Bassey Portfolio
-    Grey background, black text, boxed sections, fixed buttons
+    Clean rewrite — grey bg, black text, boxed cards, hover effects
 */
 
-/* ── Global ────────────────────────────────────────────── */
+/* ══════════════════════════════════════════════════════════
+   GLOBAL
+══════════════════════════════════════════════════════════ */
 
 body {
     background: #d6d6d6;
@@ -15,14 +17,12 @@ body, input, select, textarea {
 
 a {
     color: #1a1a1a;
-    border-bottom-color: rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid #1a1a1a !important;
+    border-bottom: none !important;
 }
 
 a:hover {
-    color: #ffffff;
-    border-bottom-color: #1a1a1a;
-    border-bottom: 1px solid #1a1a1a !important;
+    color: #000000;
+    border-bottom: none !important;
 }
 
 strong, b {
@@ -33,7 +33,9 @@ h1, h2, h3, h4, h5, h6 {
     color: #111111;
 }
 
-/* ── Sidebar ────────────────────────────────────────────── */
+/* ══════════════════════════════════════════════════════════
+   SIDEBAR
+══════════════════════════════════════════════════════════ */
 
 #sidebar {
     background: #1a1a1a;
@@ -41,44 +43,52 @@ h1, h2, h3, h4, h5, h6 {
 
 #sidebar .inner nav ul li a {
     color: rgba(255, 255, 255, 0.75);
-    border-bottom-color: transparent;
+    border-bottom: none !important;
 }
 
 #sidebar .inner nav ul li a:hover {
     color: #ffffff;
 }
 
-/* ── Section wrapper containers ─────────────────────────── */
-/* Each section gets a white boxed card with rounded corners */
+/* ══════════════════════════════════════════════════════════
+   SECTION WRAPPERS — outer padding
+══════════════════════════════════════════════════════════ */
 
 #intro.wrapper,
 #one.wrapper,
 #two.wrapper,
 #three.wrapper {
-    padding: 3em 2em;
+    padding: 4em 3em !important;
 }
 
 #intro.wrapper > .inner,
 #one.wrapper > .inner,
 #two.wrapper > .inner,
 #three.wrapper > .inner {
-    background: #ffffff;
     border-radius: 12px;
     border: 1px solid #cccccc;
     padding: 4em 3.5em;
     max-width: 1200px;
     margin: 0 auto;
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
-/* ── Intro — style1 ─────────────────────────────────────── */
+/* ══════════════════════════════════════════════════════════
+   INTRO — dark section
+══════════════════════════════════════════════════════════ */
 
 .wrapper.style1 {
     background-color: #2b2b2b;
 }
 
 #intro.wrapper > .inner {
-    background: rgba(255, 255, 255, 0.12) !important;
-    border-color: rgba(255, 255, 255, 0.25) !important;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+#intro.wrapper > .inner:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 .wrapper.style1 h1,
@@ -96,32 +106,50 @@ h1, h2, h3, h4, h5, h6 {
     font-style: italic;
 }
 
-/* ── Skills — style2 ────────────────────────────────────── */
+/* ══════════════════════════════════════════════════════════
+   SKILLS — white card, hover to dark
+══════════════════════════════════════════════════════════ */
 
 .wrapper.style2 {
     background-color: #e0e0e0;
-}
-
-.wrapper.style2 h2 {
-    color: #111111;
-    margin-bottom: 1em;
-}
-
-.wrapper.style2 h3 {
-    color: #222222;
-    margin-top: 1.5em;
-    margin-bottom: 0.4em;
-}
-
-.wrapper.style2 p {
-    color: #444444;
 }
 
 .wrapper.style2.spotlights > section {
     background: transparent;
 }
 
-/* ── Projects — style3 ──────────────────────────────────── */
+.wrapper.style2.spotlights > section > .content {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #cccccc;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.wrapper.style2.spotlights > section > .content > .inner {
+    padding: 3em;
+}
+
+.wrapper.style2.spotlights > section > .content:hover {
+    background: #1a1a1a;
+    border-color: #1a1a1a;
+}
+
+.wrapper.style2.spotlights > section > .content:hover h2,
+.wrapper.style2.spotlights > section > .content:hover h3,
+.wrapper.style2.spotlights > section > .content:hover p {
+    color: #ffffff !important;
+    transition: color 0.3s ease;
+}
+
+.wrapper.style2.spotlights > section > .content:hover .button {
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+    color: #1a1a1a !important;
+}
+
+/* ══════════════════════════════════════════════════════════
+   PROJECTS — each card is its own box, hover to dark
+══════════════════════════════════════════════════════════ */
 
 .wrapper.style3 {
     background-color: #d6d6d6;
@@ -132,38 +160,80 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1.5em;
 }
 
-/* Each project card gets its own white box */
+.features {
+    display: block !important;
+}
+
 .features section {
+    display: block !important;
+    width: 100% !important;
     background: #ffffff !important;
-    border-radius: 10px;
-    border: 1px solid #cccccc;
+    border-radius: 10px !important;
+    border: 1px solid #cccccc !important;
     padding: 2.5em 2.5em 2em 6.5em !important;
-    margin-bottom: 1.5em;
+    margin-bottom: 2em !important;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.features section:hover {
+    background: #1a1a1a !important;
+    border-color: #1a1a1a !important;
 }
 
 .features section h3 {
     color: #111111;
     font-weight: bold;
     margin-bottom: 0.5em;
+    transition: color 0.3s ease;
+}
+
+.features section:hover h3 {
+    color: #ffffff !important;
 }
 
 .features section p {
     color: #444444;
     margin-bottom: 1.2em;
+    transition: color 0.3s ease;
 }
 
+.features section:hover p {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.features section:hover .button {
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+    color: #1a1a1a !important;
+}
+
+/* Icons — no background at all */
 .features .icon.major {
     color: #2b2b2b;
+    background: none !important;
+    box-shadow: none !important;
 }
 
 .features .icon.major:before {
-    background: #e8e8e8 !important;
+    background: none !important;
+    box-shadow: none !important;
 }
 
-/* ── Contact — style1 ───────────────────────────────────── */
+.features section:hover .icon.major {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ══════════════════════════════════════════════════════════
+   CONTACT
+══════════════════════════════════════════════════════════ */
 
 #three.wrapper.style1 {
     background-color: #e0e0e0;
+}
+
+#three.wrapper > .inner {
+    background: #ffffff;
+    border-color: #cccccc;
 }
 
 #three h2 {
@@ -183,13 +253,13 @@ h1, h2, h3, h4, h5, h6 {
 
 #three a {
     color: #1a1a1a;
+    border-bottom: none !important;
 }
 
-/* Contact form fields */
 #three input[type="text"],
 #three input[type="email"],
 #three textarea {
-    background: #ffffff;
+    background: #f5f5f5;
     border: 1px solid #bbbbbb;
     border-radius: 6px;
     color: #1a1a1a;
@@ -201,38 +271,41 @@ h1, h2, h3, h4, h5, h6 {
 #three textarea:focus {
     border-color: #1a1a1a;
     outline: none;
+    background: #ffffff;
 }
 
-/* Social icons */
+/* Social icons — no background */
 ul.icons li a {
-    background: #ffffff;
     color: #1a1a1a !important;
-    border: 1px solid #999999;
+    border: 1px solid #999999 !important;
     border-radius: 8px;
     width: 2.5em;
     height: 2.5em;
     line-height: 2.5em;
     text-align: center;
     display: inline-block;
+    background: none !important;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 ul.icons li a:hover {
-    background: #1a1a1a;
+    background: #1a1a1a !important;
     color: #ffffff !important;
-    border-color: #1a1a1a;
+    border-color: #1a1a1a !important;
 }
 
-/* ── BUTTONS — fix visibility everywhere ─────────────────── */
+/* ══════════════════════════════════════════════════════════
+   BUTTONS
+══════════════════════════════════════════════════════════ */
 
-/* Default button — dark border, dark text, white bg */
 .button {
     background-color: #ffffff !important;
     border: 1px solid #1a1a1a !important;
-    border-radius: 8px;
+    border-radius: 8px !important;
     color: #1a1a1a !important;
     font-weight: bold !important;
-    border-radius: 6px;
-    padding: 0.6em 0.6em;
+    padding: 0.6em 1.2em;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .button:hover {
@@ -240,45 +313,41 @@ ul.icons li a:hover {
     color: #ffffff !important;
 }
 
-/* Primary button — solid dark */
 .button.primary {
-    background-color: #ffffff !important;
+    background-color: #1a1a1a !important;
     border: 1px solid #1a1a1a !important;
-    border-radius: 8px;
-    color: #1a1a1a !important;
+    color: #ffffff !important;
     font-weight: bold !important;
 }
 
 .button.primary:hover {
-    background-color: #1a1a1a !important;
-    border-color: #ffffff !important;
-    color: #ffffff !important;
+    background-color: #333333 !important;
+    border-color: #333333 !important;
 }
 
-/* Intro section buttons — white outline on dark bg */
+/* Intro button — transparent with white border */
 .wrapper.style1 .button {
-    background-color: #1a1a1a !important;
-    border: 1px solid #1a1a1a !important;
-    border-radius: 8px;
+    background-color: transparent !important;
+    border: 1px solid #ffffff !important;
     color: #ffffff !important;
     font-weight: bold !important;
 }
 
 .wrapper.style1 .button:hover {
-    background-color: #1a1a1a !important;
-    color: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
 }
 
-/* Submit input button */
-input[type="submit"].button,
+/* Submit button */
 input[type="submit"] {
     background-color: #1a1a1a !important;
     border: 1px solid #1a1a1a !important;
     color: #ffffff !important;
     font-weight: bold !important;
-    border-radius: 6px;
+    border-radius: 8px !important;
     padding: 0.75em 2em;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 input[type="submit"]:hover {
@@ -286,20 +355,32 @@ input[type="submit"]:hover {
     border-color: #333333 !important;
 }
 
-/* ── Footer ──────────────────────────────────────────────── */
+/* ══════════════════════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════════════════════ */
 
 #footer.wrapper.style1-alt {
     background-color: #1a1a1a;
     padding: 2em 0;
+    margin-top: 2em;
 }
 
 #footer .menu li {
     color: rgba(255, 255, 255, 0.55);
 }
 
-/* ── Responsive ──────────────────────────────────────────── */
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════════════════ */
 
 @media screen and (max-width: 768px) {
+    #intro.wrapper,
+    #one.wrapper,
+    #two.wrapper,
+    #three.wrapper {
+        padding: 2em 1em !important;
+    }
+
     #intro.wrapper > .inner,
     #one.wrapper > .inner,
     #two.wrapper > .inner,
@@ -311,51 +392,4 @@ input[type="submit"]:hover {
     .features section {
         padding: 2em 1.5em 1.5em 1.5em !important;
     }
-}
-
-/* ── Fix: each project gets its own card ────────────────── */
-
-.features {
-    display: block !important;
-}
-
-.features section {
-    display: block !important;
-    width: 100% !important;
-    margin-bottom: 2em !important;
-}
-
-/* ── Fix: spacing between wrapper sections ──────────────── */
-
-#intro.wrapper,
-#one.wrapper,
-#two.wrapper,
-#three.wrapper {
-    padding: 4em 3em !important;
-}
-
-#footer.wrapper {
-    margin-top: 2em;
-}
-
-/* Skills section hover effect */
-#one.wrapper > .inner {
-    background: #ffffff !important;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-#one.wrapper > .inner:hover {
-    background: #1a1a1a !important;
-}
-
-#one.wrapper > .inner:hover h2,
-#one.wrapper > .inner:hover h3,
-#one.wrapper > .inner:hover p {
-    color: #ffffff !important;
-}
-
-#one.wrapper > .inner:hover .button {
-    background-color: #ffffff !important;
-    border-color: #ffffff !important;
-    color: #1a1a1a !important;
 }
