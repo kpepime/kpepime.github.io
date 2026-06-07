@@ -112,36 +112,71 @@ h1, h2, h3, h4, h5, h6 {
 
 .wrapper.style2 {
     background-color: #e0e0e0;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.wrapper.style2.spotlights {
+    display: block !important;
+    padding: 4em 3em !important;
 }
 
 .wrapper.style2.spotlights > section {
-    background: transparent;
-}
-
-.wrapper.style2.spotlights > section > .content {
-    background: #ffffff;
-    border-radius: 12px;
-    border: 1px solid #cccccc;
+    display: block !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    background: #ffffff !important;
+    border: 1px solid #cccccc !important;
+    border-radius: 12px !important;
+    padding: 3.5em !important;
+    float: none !important;
     transition: background 0.3s ease, border-color 0.3s ease;
 }
 
+.wrapper.style2.spotlights > section:hover {
+    background: #1a1a1a !important;
+    border-color: #1a1a1a !important;
+}
+
+.wrapper.style2.spotlights > section > .image {
+    display: none !important;
+}
+
+.wrapper.style2.spotlights > section > .content {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+}
+
 .wrapper.style2.spotlights > section > .content > .inner {
-    padding: 3em;
+    padding: 0 !important;
 }
 
-.wrapper.style2.spotlights > section > .content:hover {
-    background: #1a1a1a;
-    border-color: #1a1a1a;
-}
-
-.wrapper.style2.spotlights > section > .content:hover h2,
-.wrapper.style2.spotlights > section > .content:hover h3,
-.wrapper.style2.spotlights > section > .content:hover p {
-    color: #ffffff !important;
+.wrapper.style2.spotlights > section h2,
+.wrapper.style2.spotlights > section h3 {
+    color: #111111;
     transition: color 0.3s ease;
 }
 
-.wrapper.style2.spotlights > section > .content:hover .button {
+.wrapper.style2.spotlights > section p {
+    color: #444444;
+    transition: color 0.3s ease;
+}
+
+.wrapper.style2.spotlights > section:hover h2,
+.wrapper.style2.spotlights > section:hover h3,
+.wrapper.style2.spotlights > section:hover p {
+    color: #ffffff !important;
+}
+
+.wrapper.style2.spotlights > section:hover .button {
     background-color: #ffffff !important;
     border-color: #ffffff !important;
     color: #1a1a1a !important;
