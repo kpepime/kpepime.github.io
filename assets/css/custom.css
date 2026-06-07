@@ -16,11 +16,13 @@ body, input, select, textarea {
 a {
     color: #1a1a1a;
     border-bottom-color: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #1a1a1a !important;
 }
 
 a:hover {
-    color: #000000;
-    border-bottom-color: transparent;
+    color: #ffffff;
+    border-bottom-color: #1a1a1a;
+    border-bottom: 1px solid #1a1a1a !important;
 }
 
 strong, b {
@@ -224,11 +226,11 @@ ul.icons li a:hover {
 /* Default button — dark border, dark text, white bg */
 .button {
     background-color: #ffffff !important;
-    border: 2px solid #1a1a1a !important;
+    border: 1px solid #1a1a1a !important;
     color: #1a1a1a !important;
     font-weight: bold !important;
     border-radius: 6px;
-    padding: 0.6em 1.5em;
+    padding: 0.6em 0.6em;
 }
 
 .button:hover {
@@ -239,7 +241,7 @@ ul.icons li a:hover {
 /* Primary button — solid dark */
 .button.primary {
     background-color: #1a1a1a !important;
-    border: 2px solid #1a1a1a !important;
+    border: 1px solid #1a1a1a !important;
     color: #ffffff !important;
     font-weight: bold !important;
 }
@@ -266,7 +268,7 @@ ul.icons li a:hover {
 input[type="submit"].button,
 input[type="submit"] {
     background-color: #1a1a1a !important;
-    border: 2px solid #1a1a1a !important;
+    border: 1px solid #1a1a1a !important;
     color: #ffffff !important;
     font-weight: bold !important;
     border-radius: 6px;
