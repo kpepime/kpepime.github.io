@@ -106,8 +106,56 @@
 									</ul>
 								</section>
 								<section>
+									<span class="icon solid major fa-database"></span>
+									<h3>RetailCo ERP Data Pipeline</h3>
+									<p>
+										End-to-end data pipeline for a Nigerian retail chain built using the modern data stack. 
+										Engineered a Python extractor that pulled 876,644 rows across 9 business entities from 
+										a live REST API, handling cursor pagination, rate limiting, exponential backoff, and 
+										idempotent upserts. Orchestrated daily incremental loads via Apache Airflow, loaded data 
+										into a PostgreSQL warehouse using dlt, and contributed to a Kimball dimensional model 
+										built with dbt covering revenue, customer behaviour, product performance, and payment 
+										channel analysis, with 58/58 data quality tests passing.
+									</p>
+									<ul class="actions">
+										<li>
+											<a href="https://github.com/kpepime/RetailCo-ERP-Data-Pipeline" 
+											target="_blank" rel="noopener noreferrer" class="button small">
+											View GitHub
+											</a>
+										</li>
+									</ul>
+								</section>
+								<section>
+									<span class="icon solid major fa-project-diagram"></span>
+									<h3>Elliptic Bitcoin Fraud Network Analysis</h3>
+									<p>
+										End-to-end blockchain fraud detection project built on the Elliptic Bitcoin 
+										Transaction Dataset, a real-world graph dataset of 203,769 transactions used 
+										in published academic research. Constructed a directed weighted graph of payment 
+										flows, computed betweenness centrality on a 20,000-node sample across 49 weakly 
+										connected components, and extracted a 19,973-node subgraph spanning all 49 time 
+										steps after diagnosing and resolving a single-time-step LCC limitation mid-analysis. 
+										Computed four centrality metrics, in-degree, out-degree, betweenness, and PageRank, 
+										and combined them into a weighted composite risk score using MinMaxScaler. 
+										Detected 16 layering nodes and 21 fan-out nodes across the network, identifying 
+										one Tier 1 transaction flagged by both patterns simultaneously and 18 unlabelled 
+										transactions exhibiting laundering behaviour with no prior investigator review. 
+										Delivered a self-contained interactive HTML compliance dashboard and a formal 
+										suspicious activity report written to NFIU and CBN regulatory standards.
+									</p>
+									<ul class="actions">
+										<li>
+											<a href="https://github.com/kpepime/Elliptic-Bitcoin-Fraud-Network-Analysis" 
+											target="_blank" rel="noopener noreferrer" class="button small">
+											View GitHub
+											</a>
+										</li>
+									</ul>
+								</section>
+								<section>
 									<span class="icon solid major fa-car"></span>
-									<h3>BMW Global Sales EDA & Dashboard (2010–2024)</h3>
+									<h3>BMW Global Sales EDA & Dashboard (2010 - 2024)</h3>
 									<p>End-to-end exploratory data analysis on 50,000 rows of BMW global sales data 
 										using PostgreSQL and Power BI. Uncovered revenue trends, model performance, 
 										and regional fuel-type preferences across 7 markets, identifying the 7 Series 
